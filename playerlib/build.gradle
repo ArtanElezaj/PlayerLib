@@ -44,6 +44,4 @@ dependencies {
     // Retrofit
     api 'com.squareup.retrofit2:retrofit:2.4.0'
     api 'com.squareup.retrofit2:converter-gson:2.1.0'
-
-
 }
