@@ -1,21 +1,24 @@
 pipeline {
     agent any
+    tools {
+     maven 'M3'
+    }
     stages {
-        stage('Stage 1'){
+        stage('Checkout'){
             steps{
-                echo "Hello World"
+                git 'https://github.com/ArtanElezaj/PlayerLib.git'
             }
         }
 
-        stage('Stage 2'){
+        stage('Build'){
             steps{
-                echo "Whats up"
+                sh 'mvn clean compile'
             }
         }
 
-        stage('Stage 3'){
+        stage('Test'){
             steps{
-                echo "Bye bye"
+                sh 'mvn test'
             }
         }
     }
