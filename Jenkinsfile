@@ -3,19 +3,19 @@ pipeline {
     stages {
         stage('Checkout'){
             steps{
-                git 'https://github.com/ArtanElezaj/PlayerLib.git'
+                echo 'aaaa'
             }
         }
 
         stage('Build'){
             steps{
-
+                echo 'aaaa'
             }
         }
 
         stage('Test'){
             steps{
-
+                echo 'aaaa'
             }
         }
     }
